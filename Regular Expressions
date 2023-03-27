@@ -1,0 +1,281 @@
+email = input("What's your email? ").strip()
+
+if "@" in email:
+    print("Valid")
+else:
+    print("Invalid")
+#
+#
+email = input("What's your email? ").strip()
+
+if "@" in email and "." in email:
+    print("Valid")
+else:
+    print("Invalid")
+#
+#
+email = input("What's your email? ").strip()
+
+username, domain = email.split("@")
+
+if username and "." in domain:
+    print("Valid")
+else:
+    print("Invalid")
+#
+#
+email = input("What's your email? ").strip()
+
+username, domain = email.split("@")
+
+if username and domain.endswith(".edu"):
+    print("Valid")
+else:
+    print("Invalid")
+
+#
+#
+import re
+
+email = input("What's your email? ").strip()
+
+if re.search("@", email):
+    print("Valid")
+else:
+    print("Invalid")
+#
+#
+import re
+
+email = input("What's your email? ").strip()
+
+if re.search(".+@.+", email):
+    print("Valid")
+else:
+    print("Invalid")
+#
+#
+import re
+
+email = input("What's your email? ").strip()
+
+if re.search(".+@.+.edu", email):
+    print("Valid")
+else:
+    print("Invalid")
+#
+#
+import re
+
+email = input("What's your email? ").strip()
+
+if re.search(".+@.+\.edu", email):
+    print("Valid")
+else:
+    print("Invalid")
+#
+#
+import re
+
+email = input("What's your email? ").strip()
+
+if re.search(r".+@.+\.edu", email):
+    print("Valid")
+else:
+    print("Invalid")
+#
+#
+import re
+
+email = input("What's your email? ").strip()
+
+if re.search(r"^.+@.+\.edu$", email):
+    print("Valid")
+else:
+    print("Invalid")
+#
+#
+import re
+
+email = input("What's your email? ").strip()
+
+if re.search(r"^[^@]+@[^@]+\.edu$", email):
+    print("Valid")
+else:
+    print("Invalid")
+#
+#
+import re
+
+email = input("What's your email? ").strip()
+
+if re.search(r"^[a-zA-Z0-9_]+@[a-zA-Z0-9_].+\.edu$", email):
+    print("Valid")
+else:
+    print("Invalid")
+#
+#
+import re
+
+email = input("What's your email? ").strip()
+
+if re.search(r"^\w+@\w.+\.edu$", email):
+    print("Valid")
+else:
+    print("Invalid")
+#
+#
+import re
+
+email = input("What's your email? ").strip()
+
+if re.search(r"^\w+@\w.+\.(com|edu|gov|net|org)$", email):
+    print("Valid")
+else:
+    print("Invalid")
+#
+#
+import re
+
+email = input("What's your email? ").strip()
+
+if re.search(r"^\w+@\w.+\.edu$", email):
+    print("Valid")
+else:
+    print("Invalid")
+#
+#
+import re
+
+email = input("What's your email? ").strip()
+
+if re.search(r"^\w+@\w.+\.edu$", email, re.IGNORECASE):
+    print("Valid")
+else:
+    print("Invalid")
+#
+#
+import re
+
+email = input("What's your email? ").strip()
+
+if re.search(r"^\w+@(\w+\.)?\w+\.edu$", email, re.IGNORECASE):
+    print("Valid")
+else:
+    print("Invalid")
+#
+#
+name = input("What's your name? ").strip()
+print(f"hello, {name}")
+#
+#
+name = input("What's your name? ").strip()
+if "," in name:
+    last, first = name.split(", ")
+    name = f"{first} {last}"
+
+print(f"hello, {name}")
+#
+#
+import re
+
+name = input("What's your name? ").strip()
+matches = re.search(r"^(.+), (.+)$", name)
+if matches:
+    last, first = matches.groups()
+    name = f"{first} {last}"
+print(f"hello, {name}")
+#
+#
+import re
+
+name = input("What's your name? ").strip()
+matches = re.search(r"^(.+), (.+)$", name)
+if matches:
+    last = matches.group(1)
+    first = matches.group(2)
+    name = f"{first} {last}"
+print(f"hello, {name}")
+#
+#
+import re
+
+name = input("What's your name? ").strip()
+matches = re.search(r"^(.+), (.+)$", name)
+if matches:
+    name = matches.group(2) + " " + matches.group(1)
+print(f"hello, {name}")
+#
+#
+import re
+
+name = input("What's your name? ").strip()
+matches = re.search(r"^(.+), *(.+)$", name)
+if matches:
+    name = matches.group(2) + " " + matches.group(1)
+print(f"hello, {name}")
+#
+#
+import re
+
+name = input("What's your name? ").strip()
+if matches := re.search(r"^(.+), *(.+)$", name):
+    name = matches.group(2) + " " + matches.group(1)
+print(f"hello, {name}")
+#
+#
+url = input("URL: ").strip()
+print(url)
+#
+#
+url = input("URL: ").strip()
+
+username = url.replace("https://twitter.com/", "")
+print(f"Username: {username}")
+#
+#
+url = input("URL: ").strip()
+
+username = url.removeprefix("https://twitter.com/")
+print(f"Username: {username}")
+#
+#
+import re
+
+url = input("URL: ").strip()
+
+username = re.sub(r"https://twitter.com/", "", url)
+print(f"Username: {username}")
+#
+#
+import re
+
+url = input("URL: ").strip()
+
+username re.sub(r"^(https?://)?(www\.)?twitter\.com/", "", url)
+print(f"Username: {username}")
+#
+#
+import re
+
+url = input("URL: ").strip()
+
+matches = re.search(r"^https?://(www\.)?twitter\.com/(.+)$", url, re.IGNORECASE)
+if matches:
+    print(f"Username:", matches.group(2))
+#
+#
+import re
+
+url = input("URL: ").strip()
+
+if matches := re.search(r"^https?://(?:www\.)?twitter\.com/(.+)$", url, re.IGNORECASE):
+    print(f"Username:", matches.group(1))
+#
+#
+import re
+
+url = input("URL: ").strip()
+
+if matches := re.search(r"^https?://(?:www\.)?twitter\.com/([a-z0-9_]+)", url, re.IGNORECASE):
+    print(f"Username:", matches.group(1))
